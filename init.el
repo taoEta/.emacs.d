@@ -29,6 +29,7 @@
 		swiper
 		counsel
 		smartparens
+		popwin
 		;; --- Major Mode ---
 		;;js2-mode
 		;; --- Minor Mode ---
@@ -76,6 +77,10 @@
 
 ;;;;;;;;;;;;;;;;;;custom config
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; config plugins          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;config smex plugin
 ;;(global-set-key (kbd "M-x") 'smex)
 ;;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -98,6 +103,14 @@
 (require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+
+;;config popwin plugin
+(require 'popwin)
+(popwin-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; config plugins    end   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;not show tool bar
 (tool-bar-mode -1)
