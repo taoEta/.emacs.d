@@ -1,0 +1,17 @@
+
+;; ----- smex-history -----
+(
+ eval-buffer
+ customize-group
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+)
+
+;; ----- smex-data -----
+(
+ (eval-buffer . 4)
+ (customize-group . 1)
+)

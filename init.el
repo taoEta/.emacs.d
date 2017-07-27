@@ -25,14 +25,14 @@
 		company
 		;; --- Better Editor ---
 		hungry-delete
-		smex
+		;;smex
 		swiper
 		counsel
 		smartparens
 		;; --- Major Mode ---
 		;;js2-mode
 		;; --- Minor Mode ---
-		nodejs-repl
+		;;for mac to locate binary folder:/usr/local/bin
 		exec-path-from-shell
 		;; --- Themes ---
 		;; theme
@@ -77,10 +77,27 @@
 ;;;;;;;;;;;;;;;;;;custom config
 
 ;;config smex plugin
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;;(global-set-key (kbd "M-x") 'smex)
+;;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;;(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;;config swiper plug
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+
+;;config smartparens plugin
+(require 'smartparens-config)
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(smartparens-global-mode t)
 
 ;;not show tool bar
 (tool-bar-mode -1)
@@ -120,3 +137,4 @@
 
 ;;set no backup file
 (setq make-backup-files nil)
+(setq auto-save-default nil)
