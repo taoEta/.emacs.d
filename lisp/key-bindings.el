@@ -18,7 +18,9 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-;;shortcut for find project file (base on git repository)
+;;custom key-bindings prefix C-c(ustom)
+
+;;shortcut for find project file (base on git repository) p:project f:file
 (global-set-key (kbd "C-c p f") 'counsel-git)
 
 (provide 'key-bindings)
