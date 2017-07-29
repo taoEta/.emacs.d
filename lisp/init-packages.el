@@ -65,7 +65,7 @@
 (global-company-mode t)
 
 ;;config theme
-;;(load-theme 'solarized t)
+(load-theme 'solarized-dark t)
 
 
 (provide 'init-packages)
