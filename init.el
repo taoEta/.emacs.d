@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 (require 'init-packages)
+(require 'init-ui)
 
 
 
@@ -70,22 +71,17 @@
 ;; config plugins    end   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;not show tool bar
-(tool-bar-mode -1)
 
-;;not show scroll bar
-(scroll-bar-mode -1)
 
-;;not show menu bar
-;(menu-bar-mode -1)
+
+
+
 
 ;;disable electric indent mode
 
-;;show line number
-(global-linum-mode t)
 
-;;not show welcome page
-(setq inhibit-splash-screen t)
+
+
 
 ;;short-cut for init file
 (defun open-init-file()
@@ -95,14 +91,8 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 
-;;set cursor type
-(setq-default cursor-type 'bar)
 
-;;show match ()
-(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
-;;highlight current line
-(global-hl-line-mode)
 
 ;;set no backup file
 (setq make-backup-files nil)

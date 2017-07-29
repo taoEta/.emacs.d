@@ -54,8 +54,8 @@
 
 
 ;;config smartparens
-(require 'smartparens-config)
-(smartparens-global-mode t)
+;;(require 'smartfparens-config) ;;auto load so don't need require
+;;(smartparens-global-mode t)
 
 ;;config popwin
 (require 'popwin)
