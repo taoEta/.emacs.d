@@ -4,3 +4,4 @@ recentf
 *.el~
 .#*.el
 smex-items
+elpa
