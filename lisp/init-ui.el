@@ -19,7 +19,9 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 ;;set cursor type
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
+(set-cursor-color "#ff69b4")
+(blink-cursor-mode 0)
 
 ;;show match ()
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
