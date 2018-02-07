@@ -3,7 +3,7 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
-;;(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 
@@ -22,5 +22,15 @@
 
 ;;shortcut for find project file (base on git repository) p:project f:file
 (global-set-key (kbd "C-c p f") 'counsel-git)
+
+;;shortcut for evil-nerd-commenter
+(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines);; comment or uncomment lines
+
+;;set evil leadeer keybindings
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+  "sb" 'switch-to-buffer
+  "kb" 'kill-buffer
+  )
 
 (provide 'key-bindings)

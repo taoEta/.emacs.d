@@ -11,6 +11,10 @@
 
 ;; Add Packages
 (defvar jason/packages '(
+		;;evil
+		evil
+		;;evil-leader
+		evil-leader
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
@@ -19,11 +23,17 @@
 		counsel
 		smartparens
 		popwin
+		;;show all avaliable keys for current prefix
+		which-key
 		;; --- Major Mode ---
 
 		;; --- Minor Mode ---
 		;;for mac to locate binary folder:/usr/local/bin
 		exec-path-from-shell
+		;;for mac open file in finder
+		reveal-in-osx-finder
+		;;commentor
+		evil-nerd-commenter
 		;; --- Themes ---
 		;; theme
 		solarized-theme
@@ -47,6 +57,13 @@
 ;; config plugins          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;enable evil-leader
+(require 'evil-leader)
+(global-evil-leader-mode)
+
+;;enable evil
+(evil-mode 1)
+
 ;;config swiper (see key bindings)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -63,6 +80,9 @@
 
 ;;config company
 (global-company-mode t)
+
+;;config which-key-mode
+(which-key-mode 1)
 
 ;;config theme
 (load-theme 'solarized-dark t)
