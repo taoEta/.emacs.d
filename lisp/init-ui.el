@@ -1,4 +1,10 @@
-;;ui configurations
+;;  _   _ ___                       __ _       
+;; | | | |_ _|      ___ ___  _ __  / _(_) __ _ 
+;; | | | || |_____ / __/ _ \| '_ \| |_| |/ _` |
+;; | |_| || |_____| (_| (_) | | | |  _| | (_| |
+;;  \___/|___|     \___\___/|_| |_|_| |_|\__, |
+;;                                       |___/ 
+;;
 
 ;;not show tool bar
 (tool-bar-mode -1)
@@ -25,6 +31,14 @@
 
 ;;show match ()
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+;;show parent fun
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     ad-do-it)))
+  )
 
 ;;highlight current line
 (global-hl-line-mode)

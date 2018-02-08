@@ -1,56 +1,69 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;; package
+;;                   _                         
+;;  _ __   __ _  ___| | ____ _  __ _  ___  ___ 
+;; | '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
+;; | |_) | (_| | (__|   < (_| | (_| |  __/\__ \
+;; | .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
+;; |_|                         |___/           
+;;
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; managed by cask <start> ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; cl - Common Lisp Extension
-(require 'cl)
+;; (require 'cl)
 
-(when (>= emacs-major-version 24)
-    (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
-
-;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
-
-;; Add Packages
-(defvar jason/packages '(
-		;;evil
-		evil
-		;;evil-leader
-		evil-leader
-		;; --- Auto-completion ---
-		company
-		;; --- Better Editor ---
-		hungry-delete
-		swiper
-		counsel
-		smartparens
-		popwin
-		;;show all avaliable keys for current prefix
-		which-key
-		;; --- Major Mode ---
-
-		;; --- Minor Mode ---
-		;;for mac to locate binary folder:/usr/local/bin
-		exec-path-from-shell
-		;;for mac open file in finder
-		reveal-in-osx-finder
-		;;commentor
-		evil-nerd-commenter
-		;; --- Themes ---
-		;; theme
-		solarized-theme
-		) "Default packages")
-(setq package-selected-packages jason/packages)
-
-(defun jason/packages-installed-p ()
-     (loop for pkg in jason/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
-
-(unless (jason/packages-installed-p)
-     (message "%s" "Refreshing package database...")
-     (package-refresh-contents)
-     (dolist (pkg jason/packages)
-       (when (not (package-installed-p pkg))
-	 (package-install pkg))))
+;; (when (>= emacs-major-version 24)
+;;     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+;; 		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+;; 
+;; ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
+;; 
+;; ;; Add Packages
+;; (defvar jason/packages '(
+;; 		;;evil
+;; 		evil
+;; 		;;evil-leader
+;; 		evil-leader
+;; 		;; --- Auto-completion ---
+;; 		company
+;; 		;; --- Better Editor ---
+;; 		hungry-delete
+;; 		swiper
+;; 		counsel
+;; 		smartparens
+;; 		popwin
+;; 		;;show all avaliable keys for current prefix
+;; 		which-key
+;; 		;; --- Major Mode ---
+;; 
+;; 		;; --- Minor Mode ---
+;; 		;;for mac to locate binary folder:/usr/local/bin
+;; 		exec-path-from-shell
+;; 		;;for mac open file in finder
+;; 		reveal-in-osx-finder
+;; 		;;commentor
+;; 		evil-nerd-commenter
+;; 		;; --- Themes ---
+;; 		;; theme
+;; 		solarized-theme
+;; 		) "Default packages")
+;; (setq package-selected-packages jason/packages)
+;; 
+;; (defun jason/packages-installed-p ()
+;;      (loop for pkg in jason/packages
+;; 	   when (not (package-installed-p pkg)) do (return nil)
+;; 	   finally (return t)))
+;; 
+;; (unless (jason/packages-installed-p)
+;;      (message "%s" "Refreshing package database...")
+;;      (package-refresh-contents)
+;;      (dolist (pkg jason/packages)
+;;        (when (not (package-installed-p pkg))
+;; 	 (package-install pkg))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; managed by cask <end>   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
