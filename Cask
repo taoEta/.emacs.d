@@ -30,3 +30,4 @@
 (depends-on "swiper")
 (depends-on "undo-tree")
 (depends-on "which-key")
+(depends-on "youdao-dictionary")

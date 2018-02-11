@@ -77,6 +77,10 @@
 ;;enable evil
 (evil-mode 1)
 
+;;disable insert mode key binding of vim
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
 ;;config swiper (see key bindings)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

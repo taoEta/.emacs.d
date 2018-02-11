@@ -41,6 +41,7 @@
 (evil-leader/set-key
   "sb" 'switch-to-buffer
   "kb" 'kill-buffer
+  "t"  'youdao-dictionary-search-at-point-tooltip
   )
 
 (provide 'key-bindings)

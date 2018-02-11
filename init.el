@@ -11,7 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;;config cask package manager
-(require 'cask "/Users/jason/.emacs.d/.cask/25.3/elpa/cask-20180119.1906/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
@@ -25,20 +25,24 @@
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; insert custom config before require    ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; lisp/init-packages.el
-(require 'init-packages)
-;; lisp/init-ui.el
-(require 'init-ui)
-;; lisp/better-defaults.el
-(require 'better-defaults)
-;; lisp/keybindings.el should be the last one
-(require 'key-bindings)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; insert custom config before require ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; lisp/custom.el
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
+
+;; lisp/init-packages.el
+(require 'init-packages)
+
+;; lisp/init-ui.el
+(require 'init-ui)
+
+;; lisp/better-defaults.el
+(require 'better-defaults)
+
+;; lisp/keybindings.el should be the last one
+(require 'key-bindings)
+
 
