@@ -36,11 +36,22 @@
 ;;shortcut for evil-nerd-commenter
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines);; comment or uncomment lines
 
+;;func
+(defun move-end-and-eval ()
+  "Evaluate the last sexp at the end of the current line."
+  (interactive)
+  (save-excursion
+    (end-of-line)
+    (eval-last-sexp nil)))
+
 ;;set evil leadeer keybindings
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "sb" 'switch-to-buffer
+  "ff" 'find-file
+  "fr" 'recentf-open-files
   "kb" 'kill-buffer
+  "r"  'move-end-and-eval
+  "sb" 'switch-to-buffer
   "t"  'youdao-dictionary-search-at-point-tooltip
   )
 
