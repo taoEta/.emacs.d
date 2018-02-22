@@ -81,6 +81,10 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
+;;enable evil-surround mode
+(require 'evil-surround)
+(global-evil-surround-mode)
+
 ;;config swiper (see key bindings)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

@@ -49,10 +49,13 @@
 (evil-leader/set-key
   "ff" 'find-file
   "fr" 'recentf-open-files
+  "fd" 'dired
   "kb" 'kill-buffer
   "r"  'move-end-and-eval
   "sb" 'switch-to-buffer
   "t"  'youdao-dictionary-search-at-point-tooltip
+  "q"  'evil-quit
+  "w"  'evil-write
   )
 
 (provide 'key-bindings)
