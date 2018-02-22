@@ -5,3 +5,4 @@ recentf
 .#*.el
 smex-items
 elpa
+.cask
