@@ -22,6 +22,8 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+;;python interpretor
+(setq python-shell-interpreter "/usr/local/bin/python3")
 
 
 
@@ -44,5 +46,3 @@
 
 ;; lisp/keybindings.el should be the last one
 (require 'key-bindings)
-
-

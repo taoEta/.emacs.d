@@ -50,8 +50,9 @@
   "ff" 'find-file
   "fr" 'recentf-open-files
   "fd" 'dired
+  "fi" 'open-init-file
   "kb" 'kill-buffer
-  "r"  'move-end-and-eval
+  "e"  'move-end-and-eval
   "sb" 'switch-to-buffer
   "t"  'youdao-dictionary-search-at-point-tooltip
   "q"  'evil-quit

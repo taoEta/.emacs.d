@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "package-build" "package-build.el" (23164 21500
+;;;### (autoloads nil "package-build" "package-build.el" (23165 42099
 ;;;;;;  0 0))
 ;;; Generated autoloads from package-build.el
 
@@ -39,7 +39,7 @@ Build all packages in the `package-build-recipe-alist'.
 ;;;***
 
 ;;;### (autoloads nil "package-recipe-mode" "package-recipe-mode.el"
-;;;;;;  (23164 21500 0 0))
+;;;;;;  (23165 42099 0 0))
 ;;; Generated autoloads from package-recipe-mode.el
 
 (autoload 'package-build-create-recipe "package-recipe-mode" "\
@@ -55,7 +55,7 @@ Build archive for the recipe defined in the current buffer.
 ;;;***
 
 ;;;### (autoloads nil nil ("package-build-badges.el" "package-build-pkg.el")
-;;;;;;  (23164 21500 0 0))
+;;;;;;  (23165 42099 0 0))
 
 ;;;***
 
