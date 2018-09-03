@@ -106,7 +106,8 @@
 (which-key-mode 1)
 
 ;;config theme
-(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
+(load-theme 'dracula t)
 
 
 (provide 'init-packages)
