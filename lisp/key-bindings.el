@@ -51,9 +51,9 @@
   "fr" 'recentf-open-files
   "fd" 'dired
   "fi" 'open-init-file
-  "kb" 'kill-buffer
+  "bk" 'kill-buffer
+  "bs" 'switch-to-buffer
   "e"  'move-end-and-eval
-  "sb" 'switch-to-buffer
   "t"  'youdao-dictionary-search-at-point-tooltip
   "q"  'evil-quit
   "w"  'evil-write
